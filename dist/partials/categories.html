@@ -1,0 +1,42 @@
+<!-- Page Title -->
+<div class="container-fluid page-title">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Categories</h2>
+		</div>
+	</div>
+</div>
+<!-- /.page-title -->
+
+<!-- Categories -->
+<div class="container categories">
+	<div class="row">
+		<!-- Category -->
+		<div ng-repeat="category in products.categoryList">
+			<a class="content" ui-sref="products"> <!-- Would take you to a product page limited to this category -->
+				<div class="col-xs-12 col-sm-6 col-md-3 category">
+					<img class="category-image" src="http://placehold.it/400x300">
+					<h3 class="category-name">{{ category.name }}</h3>
+					<div class="title-underline"></div>
+					<p class="category-description">
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					</p>
+				</div>
+			</a>
+		</div>
+		<!-- /.cateogry -->
+	</div>
+</div>
+<!-- /.categories -->
+
+<!-- Call To Action -->
+<div class="container-fluid page-cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8 offset-md-2">
+				<a ui-sref="products"><button>View All Products</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.page-cta -->

@@ -1,0 +1,43 @@
+<!-- Page Title -->
+<div class="container-fluid page-title">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Products</h2>
+		</div>
+	</div>
+</div>
+<!-- /.page-title -->
+
+<!-- Categories -->
+<div class="container product-listing">
+	<!-- Product -->
+	<div class="row product" ng-repeat="product in products.productList">
+		<div class="col-xs-12 col-sm-3 col-md-4 img-block">
+			<a ui-sref="product">
+				<img class="item-image" src="http://placehold.it/300x150">
+			</a>
+		</div>
+		<div class="col-xs-12 col-sm-9 col-md-8 content-block">
+			<h5 class="item-title"><a ui-sref="product">{{ product.name }}</a></h5>
+			<h6 class="category"><a ui-sref="categories">{{ product.category }}</a></h6>
+			<p class="item-description">
+				{{ product.description }}
+			</p>
+			<a ui-sref="product({id: product.id})"><button class="view-product">View Product</button></a>
+		</div>
+	</div>
+	<!-- product -->
+</div>
+<!-- /.categories -->
+
+<!-- Call To Action -->
+<div class="container-fluid page-cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8 offset-md-2">
+				<a ui-sref="categories"><button>View All Categories</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.page-cta -->

@@ -1,0 +1,242 @@
+@import 'bourbon/bourbon';
+
+* {margin: 0; padding: 0;}
+
+
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+$color-background: 	   	#f4f4f4;
+$color-alt-background: 	#434A54;
+$color-border:			#DDD;
+$color-primary:        	#8CC152;
+$color-alt:            	#7DB1B1;
+$color-text:           	#333;
+$color-text-light:     	#767676;
+$color-error: 			#BF263C;
+
+$border-radius-small: 3px;
+$border-radius-large: 6px;
+
+$font-logo: 'Courgette', cursive;
+$font-body: 'Muli', sans-serif;
+
+$checkbox-size: 26px;
+
+
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+@mixin clearAfter() {
+	content:"";
+    display:table;
+    clear:both;
+}
+
+@mixin displayInlineBlock() {
+	display: inline-block;
+	vertical-align: top;
+}
+
+@mixin boxShadow() {
+	box-shadow: 1px 1px 3px rgba($color-alt-background, .1);
+}
+
+@mixin borderRadius($border-radius) {
+	-webkit-border-radiu: $border-radius;
+	  -moz-border-radius: $border-radius;
+		   border-radius: $border-radius;
+}
+
+@mixin transitionAnimation() {
+	transition: all .25s ease;
+}
+
+
+
+// --------------------------------------------------
+// Global Styles
+// --------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-size: 16px;
+	font-family: $font-body;
+    background-color: $color-background;
+	color: $color-text;
+	line-height: 1.6em;
+}
+
+a {
+	color: $color-alt;
+	@include transitionAnimation();
+
+	&:hover {
+		color: darken($color-alt, 20);
+	}
+
+	&.content {
+		color: $color-text;
+
+		&:hover {
+			text-decoration: none;
+
+			h3 {
+				color: darken($color-alt, 20);
+			}
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+input {
+	outline: none;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.title-underline {
+	width: 60px;
+	height: 1px;
+	background-color: rgba($color-text, .6);
+	margin: 10px 0 20px;
+}
+
+
+
+form {
+	input {
+		&.ng-dirty {
+			&.ng-invalid {
+				border: 1px solid $color-error;
+			}
+		}
+	}
+}
+
+button {
+	width: 60%;
+	background-color: $color-primary;
+	color: $color-background;
+	padding: 10px 0;
+	border: none;
+	margin-top: 30px;
+	@include boxShadow();
+}
+
+
+
+.page-title,
+.tagline {
+	background-image: url('../images/pixel_weave.png');
+	background-repeat: repeat;
+	text-transform: capitalize;
+	text-align: center;
+	color: $color-alt-background;
+	padding: 60px 0;
+	margin-bottom: 60px;
+
+	h2 {
+		margin: 0;
+	}
+}
+
+
+
+.page-cta {
+	background-color: darken($color-background, 2);
+	text-align: center;
+	padding: 60px 0;
+}
+
+
+
+.featured-item,
+.single-product,
+.product-listing {
+	padding-top: 40px;
+	padding-bottom: 100px;
+
+	.product {
+		padding-bottom: 120px;
+	}
+
+	.item-image {
+		width: 100%;
+		height: auto;
+	}
+
+	.category {
+		a {
+			color: lighten($color-alt, 15);
+		}
+	}
+}
+
+.featured-item,
+.product-listing {
+
+	.item-description {
+		max-height: 71px;
+		overflow: hidden;
+	}
+
+	.view-product {
+		width: auto;
+		font-size: 0.8em;
+		padding: 4px 14px;
+		float: left;
+		margin-top: 0;
+	}
+}
+
+
+
+
+
+// --------------------------------------------------
+// Header Styles
+// --------------------------------------------------
+@import '_header.scss';
+
+
+
+// --------------------------------------------------
+// Footer Styles
+// --------------------------------------------------
+@import '_footer.scss';
+
+
+
+// --------------------------------------------------
+// Home Styles
+// --------------------------------------------------
+@import '_home.scss';
+
+
+
+// --------------------------------------------------
+// Category Styles
+// --------------------------------------------------
+@import '_category.scss';
+
+
+
+// --------------------------------------------------
+// Responsive Styles
+// --------------------------------------------------
+@import '_responsive.scss';

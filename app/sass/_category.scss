@@ -1,0 +1,19 @@
+.categories {
+
+	.category {
+		background-color: darken($color-background, .5);
+		padding: 15px;
+		margin-bottom: 60px;
+		@include transitionAnimation();
+
+		&:hover {
+			background-color: darken($color-background, 2);
+			z-index: 10;
+			@include boxShadow();
+		}
+
+		.category-image {
+			padding-bottom: 20px;
+		}
+	}
+}

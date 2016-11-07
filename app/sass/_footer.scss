@@ -1,0 +1,38 @@
+footer {
+	background-color: $color-alt-background;
+	color: $color-background;
+	padding: 15px 0;
+
+	.footer-logo,
+	.footer-navigation {
+		width: 60%;
+		float: left;
+	}
+
+	.footer-copyright {
+		width: 40%;
+		text-align: right;
+		float: right;
+	}
+
+	.logo {
+		font-size: 1.2em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	.navigation {
+		list-style: none;
+		padding-top: 5px;
+
+		li {
+			display: inline-block;
+			padding-right: 20px;
+		}
+	}
+
+	.copyright {
+		color: lighten($color-alt-background, 30);
+	}
+
+}

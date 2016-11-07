@@ -1,0 +1,14 @@
+.search {
+
+	h3 {
+		padding-bottom: 10px;
+	}
+
+	.search-input {
+		width: 100%;
+		background-color: $color-background;
+		border: none;
+		padding: 10px;
+		@include boxShadow();
+	}
+}
