@@ -25,7 +25,9 @@
 			controllerAs: 'products'
 		}).state('product', {
 			url: '/products/:id',
-			templateUrl: 'partials/single-product.html'
+			templateUrl: 'partials/single-product.html',
+			controller: 'CSingleProduct',
+			controllerAs: 'product'
 		});
 	}
 })();

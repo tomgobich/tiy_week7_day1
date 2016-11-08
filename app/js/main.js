@@ -35,6 +35,8 @@
 		{
 			url:			'/products/:id',
 			templateUrl:	'partials/single-product.html',
+			controller: 	'CSingleProduct',
+	        controllerAs: 	'product'
 		})
 	}
 
